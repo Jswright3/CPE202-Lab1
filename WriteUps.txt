@@ -1,0 +1,21 @@
+#3.
+My binary search function works by taking the middle index value of a sorted integer list and returns it if it is equal
+to the target or returns a binary search of either the area between low and mid-1 if the target is less than the middle
+list value or between mid + 1 and max if more than the middle value.  This recursion continues testing the middle value
+until it is found, or if is is not, None is returned.  My function has a complexity of O(log n).
+For search([2,3,5,6,9], 9), The middle of index 2 is calculated and since our target 9 is greater than our middle value
+5 the function calls another binary search between index 2 our previous middle and index 4 our previous max. Then
+our middle is 3 and our new endpoints 4 and 5 and then once 5 is tested it will be returned as index 5 is our target
+value 9.
+
+#4.
+To solve for the Fibonacci number we know that if n == 0, to return 0 and if n == 1, to return 1.  Then for any value
+>=2 we can use the formula given F(n-1) + F(n-2).  The Complexity of my Fibonacci function is O(2^n)
+For Fib(3) the function calls f(3-1) + F(3-2) or F(2)+F(1) on the next pass through the function it returns a 1 and
+f(2-1) + f(2-2) which is solved to be 0 + 1.  Once all are added back up by recursion our solution of 2 is found
+
+#5.
+When we try to solve for 1000! my recursive factorial function hits the recursion limit and returns an error, while my
+iterative solution is still able to solve it.  This is because Python has a built in recursion limit of 1000 meaning a
+function can not call itself over 1000 times in a row. Because my iterative solution is not limited by this it is still
+able to solve the problem.
